@@ -15,18 +15,6 @@
   "bugs": {
     "url": "https://github.com/antopfs/lighthouse/issues"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "homepage": "https://github.com/antopfs/lighthouse#readme",
   "dependencies": {
     "@lhci/cli": "^0.9.0"
