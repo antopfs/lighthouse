@@ -5,7 +5,8 @@ module.exports = {
         url: ['http://127.0.0.1:80/lighthouse/index.html']
       },
       upload: {
-        target: 'temporary-public-storage',
+        target:lhci
+        //target: 'temporary-public-storage',
       },
     },
   };
