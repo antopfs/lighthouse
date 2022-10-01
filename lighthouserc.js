@@ -1,10 +1,11 @@
 module.exports = {
     ci: {
       collect: {
-        /* Agregue la configuración aquí */
+        staticDistDir: './public',
+        url: ['http://localhost:8080']
       },
       upload: {
-        /* Agregue la configuración aquí */
+        target: 'temporary-public-storage',
       },
     },
   };
