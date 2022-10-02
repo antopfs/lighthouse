@@ -1,19 +1,379 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="es">
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>HOLA esto es una prueba</h1>
-    <img src="" alt="" srcset="">
-    <h2>saxasx</h2>
+    <meta name="description" content="Desarrollo de páginas web, aplicaciones web, Tiendas Online a la medida de cada necesidad, trabajos de muy buena calidad">
+    <meta name="theme-color" content="#000">
+    <link rel="canonical" href="https://apdesarrolloweb.com">
+    <link rel="icon" href="images/favicon.svg">
+    <link rel="apple-touch-icon" href="images/favicon.svg">
+    <link rel="stylesheet" href="styles/style.min.css">
+    <link rel="stylesheet" href="styles/style2.min.css">
+    <title>Páginas y aplicaciones Web ApDesarrollo Web</title>
+  </head>
+  <body> 
+    <header class="header p-20 d-flex" id="header-main">
+      <div>
+        <a href="index.html">
+          <img src="images/logo.svg" alt="logotipo ApdesarrolloWeb" width="200" height="33">
+        </a>
+      </div>
+      <!-- ver como levantarlo -->
+      <!-- <div class="p-20 m-lr-10 d-flex" >
+        <form style="display: none;">  
+          <input type="search" placeholder="buscar">
+        </form>
+      </div> -->
+      <!-- <div class="content-hidden-responsive">
+        <a href="" >
+          <svg alt="logotipo buscar" class="hover-icon" width="27" height="27" version="1.1" viewBox="0 0 31.75 31.75" xmlns="http://www.w3.org/2000/svg">
+            <g transform="matrix(1.6799 0 0 1.6799 -6.7198 -2.5622)" fill="#fff">
+             <path d="m18.319 14.433c2.4438-3.1385 2.223-7.6791-0.6621-10.564-3.1242-3.1242-8.1896-3.1242-11.314 0-3.1242 3.1242-3.1242 8.1895 0 11.314 2.8852 2.8852 7.4258 3.1059 10.564 0.6622 0.0135 0.0153 0.0276 0.0303 0.0422 0.0449l4.2427 4.2426c0.3905 0.3906 1.0237 0.3906 1.4142 0 0.3905-0.3905 0.3905-1.0236 0-1.4142l-4.2426-4.2426c-0.0147-0.0146-0.0297-0.0287-0.045-0.0423zm-2.0764-9.1501c2.3432 2.3431 2.3432 6.1421 0 8.4853-2.3431 2.3431-6.1421 2.3431-8.4852 0-2.3432-2.3432-2.3432-6.1422 0-8.4853 2.3431-2.3432 6.1421-2.3432 8.4852 0z" clip-rule="evenodd" fill="#fff" fill-rule="evenodd"/>
+            </g>
+          </svg> <img src="images/icon-Buscar.svg" alt="icono buscar" style="border-right:2px solid red; padding: 20px;"></a>        </a>
+      </div> -->
+      <div class="content-hidden-responsive" style="margin-left:auto;">
+        <ul class="d-flex">
+          <li class="m-lr-10"><a href="https://api.whatsapp.com/send?phone=56935871463"><svg alt="logotipo Whatsapp" class="hover-icon" width="27" height="27" version="1.1" viewBox="0 0 31.75 31.75" xmlns="http://www.w3.org/2000/svg">
+            <path d="m20.369 17.455q0.36226 0 2.0297 0.93382 1.6673 0.86198 1.8122 1.0775 0.07237 0.07172 0.07237 0.28726 0 0.64652-0.36226 1.5803-0.36226 0.79015-1.4498 1.3648-1.0873 0.50281-2.1022 0.50281-1.0873 0-3.9869-1.2212-2.0296-1.0057-3.4794-2.4423-1.4498-1.4366-3.0445-3.8071-1.5223-2.155-1.5223-3.9508v-0.21554q0.14514-1.8677 1.5223-3.2325 0.5074-0.43101 1.0873-0.43101h0.36226q0.21751 0.07172 0.43495 0.07172 0.43491 0 0.5074 0.14383 0.14514 0.07172 0.36266 0.50281 0 0.14383 0.21751 0.79015 0.28988 0.57468 0.43491 1.0775 0.50744 1.293 0.50744 1.5085 0 0.43101-0.65238 1.1493-0.72491 0.71831-0.72491 1.0057 0 0.14383 0.07238 0.28726 0.79736 1.6521 2.1022 2.8015 1.3048 1.2211 3.117 2.0831 0.43495 0.14383 0.50744 0.14383 0.28989 0 1.0873-1.0057 0.86986-1.0057 1.0873-1.0057zm-4.2044 10.919q2.6096 0 5.0742-1.0775 2.3196-0.93382 4.1318-2.7297 1.8122-1.7958 2.7546-4.0945 1.0148-2.2268 1.0148-5.0283 0-2.7296-1.0148-4.9564-1.0149-2.4423-2.7546-4.1663-1.5947-1.5803-4.1318-2.7297-2.6096-1.0057-5.0742-1.0057-2.4646 0-5.0742 1.0057-2.5371 1.1493-4.1318 2.7297-1.7397 1.724-2.7546 4.1663-1.0148 2.2268-1.0148 4.9564 0 4.2381 2.4646 7.5424l-1.6673 4.8128 5.0017-1.5803q3.407 2.155 7.1764 2.155zm-6.089-27.153q3.0446-1.2212 6.089-1.2212 3.0446 0 6.0891 1.2212 2.7546 1.1493 4.9293 3.3043 2.1022 2.0113 3.3345 4.9565 1.2323 2.6578 1.2323 5.9621 0 3.3043-1.2323 6.0339-1.2323 2.8733-3.3345 4.9565-1.9572 1.9395-4.9293 3.3043-3.0445 1.2212-6.0891 1.2212-4.0593 0-7.5388-1.9395l-8.6261 2.7297 2.7546-8.3326q-2.1747-3.5198-2.1747-7.9734 0-3.3043 1.2323-5.9621 1.2323-2.9451 3.3345-4.9565 2.1747-2.155 4.9292-3.3043z" fill="#fff" stroke-width=".49481"/>
+           </svg></a></li>
+          <li class="m-lr-10"><a href="mailto:info@apdesarrolloweb.com?Subject=Correo%20desde%20Apdesarrolloweb.com"><svg alt ="icono Mail" class="hover-icon" width="34.388" height="27" version="1.1" viewBox="0 0 9.0984 7.1438" xmlns="http://www.w3.org/2000/svg">
+            <path d="m8.4406 6.344v-3.9096q-0.15994 0.1777-0.33763 0.33763-1.2084 0.92407-2.168 1.7237-0.071064 0.053304-0.23101 0.1777-0.14216 0.10662-0.19547 0.15994-0.21324 0.14216-0.42648 0.24878-0.33763 0.12439-0.53311 0.12439-0.19548 0-0.53311-0.12439-0.21325-0.10662-0.42648-0.24878-0.053322-0.053313-0.21324-0.15994-0.14217-0.1244-0.21324-0.1777-0.9596-0.79967-2.168-1.7237-0.1777-0.15993-0.33763-0.33763v3.9096q0 0.071084 0.035581 0.10663 0.053322 0.053304 0.12439 0.053304h7.4637q0.071064 0 0.1244-0.053304 0.035581-0.035552 0.035581-0.10663zm0-5.3489v-0.1777l-0.017741-0.071084-0.017741-0.035552-0.053322-0.053313h-7.5345q-0.053322 0-0.12439 0.035552-0.035581 0.035552-0.035581 0.12439 0 0.85297 0.74637 1.4394 0.23101 0.1777 0.92405 0.74637 0.71082 0.55089 1.1018 0.87074l0.053322 0.053314q0.071066 0.035552 0.12439 0.088856 0.21324 0.1777 0.23101 0.19548 0.088807 0.035552 0.23103 0.15993 0.1777 0.10662 0.24878 0.14216 0.1777 0.035552 0.23101 0.035552 0.053322 0 0.23101-0.035552 0.071064-0.035552 0.24878-0.14216 0.14217-0.12439 0.23101-0.15993 0.017741-0.017782 0.23101-0.19548 0.053322-0.053313 0.1244-0.088856l0.053322-0.053314q0.39096-0.31988 1.084-0.87074 0.71082-0.56866 0.94182-0.74637 0.26656-0.19548 0.51534-0.58641 0.23101-0.35541 0.23101-0.67527zm0.65751-0.1777v5.5266q0 0.33763-0.23103 0.56866-0.23101 0.23101-0.58644 0.23101h-7.4637q-0.35541 0-0.58644-0.23101-0.23101-0.23101-0.23101-0.56866v-5.5266q0-0.33763 0.23101-0.56866 0.24878-0.24878 0.58644-0.24878h7.4637q0.33763 0 0.58644 0.24878 0.23103 0.23101 0.23103 0.56866z" fill="#fff" stroke-width=".12186"/>
+           </svg>
+           </a></li>
+          <li class="m-lr-10"><a href="https://www.facebook.com/apdesarrolloweb2022"><svg class="hover-icon" alt ="logotipo Facebook" width="27" height="27" version="1.1" viewBox="0 0 31.749 31.75" xmlns="http://www.w3.org/2000/svg">
+            <path d="m25.806 4.4e-5q2.4645 0 4.2043 1.7397 1.7396 1.7397 1.7396 4.2043v19.862q0 2.4646-1.7396 4.2043-1.7398 1.7397-4.2043 1.7397h-3.9144v-12.323h4.1318l0.65246-4.7842h-4.7842v-3.0445q0-1.0873 0.50744-1.7397 0.57973-0.57991 1.8847-0.57991h2.537v-4.3493q-1.7396-0.14502-3.6968-0.14502-2.827 0-4.4943 1.6672-1.6671 1.6672-1.6671 4.6393v3.5519h-4.1319v4.7842h4.1319v12.323h-11.018q-2.4646 0-4.2043-1.7397-1.7398-1.7397-1.7398-4.2043v-19.862q0-2.4646 1.7398-4.2043 1.7397-1.7397 4.2043-1.7397z" fill="#fff" stroke-width=".49706"/>
+           </svg></a></li>
+          <li class="m-lr-10"><a href="https://www.instagram.com/apdesarrolloweb/"><svg class="hover-icon" alt ="logotipo Instagram" width="27" height="27" version="1.1" viewBox="0 0 31.75 31.75" xmlns="http://www.w3.org/2000/svg">
+            <path d="m28.198 26.821v-13.41h-2.827q0.43491 1.3048 0.43491 2.7546 0 2.6096-1.3047 4.7842-1.4498 2.2471-3.6245 3.4795-2.2471 1.3048-5.0016 1.3048-4.0594 0-6.9589-2.8271t-2.8995-6.7414q0-1.4498 0.43491-2.7546h-2.9721v13.41q0 0.57991 0.36226 0.94234 0.5074 0.36246 0.94231 0.36246h22.109q0.43491 0 0.94235-0.36246 0.36226-0.36242 0.36226-0.94234zm-5.8714-11.018q0-2.6096-1.8848-4.3493-1.8847-1.8122-4.5667-1.8122-2.6821 0-4.4943 1.8122-1.8847 1.7397-1.8847 4.3493 0 2.5371 1.8847 4.4218 1.9572 1.8122 4.4943 1.8122 2.5372 0 4.5667-1.8122 1.8848-1.8847 1.8848-4.4218zm5.8714-7.4663v-3.407q0-0.57991-0.43491-1.0148-0.43491-0.43493-1.0148-0.43493h-3.6243q-0.57993 0-1.0148 0.43493-0.36226 0.36242-0.36226 1.0148v3.407q0 0.6524 0.36226 1.0148 0.43491 0.43493 1.0148 0.43493h3.6243q0.57993 0 1.0148-0.43493 0.43491-0.43493 0.43491-1.0148zm3.552-4.2768v23.631q0 1.7397-1.1597 2.8995-1.1599 1.1598-2.8995 1.1598h-23.631q-1.7398 0-2.8995-1.1598-1.1599-1.1598-1.1599-2.8995v-23.631q0-1.7397 1.1599-2.8996 1.1597-1.1598 2.8995-1.1598h23.631q1.7397 0 2.8995 1.1598 1.1597 1.1598 1.1597 2.8996z" fill="#fff" stroke-width=".49706"/>
+           </svg>
+           </a></li>
+        </ul>
+      </div>
+      <div class="main-btn" id="main-btn" style="margin-left: 50px;">
+        <div class="custom-menu-toggle openMenu" id="custom-menu-toggle"></div>
+      </div>
+      <div class="content-hidden-responsive">
+        <a href="tel:56935871463" class="d-flex header-logo-cellphone">
+          <div>
+            <svg alt="icono Telefono" class="m-lr-10 hover-icon2" width="40" height="40" version="1.1" viewBox="0 0 31.75 31.75" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="15.875" cy="15.875" r="15.875" fill="#666" fill-opacity=".41197" fill-rule="evenodd" stroke-width=".3231"/>
+              <path d="m8.3854 7.6746s4.858 2.4891 4.88 4.7617c0.0088 0.9829-2.0703 2.0999-2.0703 2.0999-0.12906 0.20676-1.6847 1.0285 1.4788 4.3181 1.5426 1.6041 3.3076 2.4526 4.4955 1.2422 0 0 1.0369-1.8442 1.9224-1.8337 2.2445 0.02657 4.7617 4.7617 4.7617 4.7617l-1.8929 1.8337c-0.55339 0.43881-1.2018 0.52929-1.9224 0.35491-2.3666-0.89302-11.315-2.13-13.96-14.167-0.01752-0.47675-0.20235-0.90429 0.41405-1.5675z" fill="#fff"/>
+              <path d="m13.421 6.6657c5.6049 0.95964 9.7063 4.2498 11.508 11.104" fill="none" stroke="#fff" stroke-width=".77257px"/>
+              <path d="m15.421 5.1045c5.3897 0.85204 8.8607 3.827 11.508 11.104" fill="none" stroke="#fff" stroke-width=".77257px"/>
+            </svg>
+          </div>
+          <span class="header-item-cellphone" >
+            9 3587 14 63
+          </span>
+        </a>
+      </div>
+    </header>
+    <nav class="navbar" id="navbar">
+      <div class ="navbar-exit" id = "navbar-exit">x</div>
+      <div class="navbar-content-logo">
+        <a href="index.html">
+          <img src="images/logo-dark.svg" alt="logotipo ApdesarrolloWeb" width="193" height="65">
+        </a>
+      </div>
+      <span class="text-center m-b-20">Servicios</span>
+      <ul class ="navbar-content-menu">
+        <li><img src="images/icon-Paginas-web.svg" width="20" height="20" alt="Páginas web"><a href="index.html">PÁGINAS WEB</a></li>
+        <li><img src="images/icon-Tiendas-online.svg" width="20" height="20" alt="Tiendas Online"><a href="index.html">TIENDAS ONLINE</a></li>
+        <li><img src="images/icon-Aplicaciones-web.svg" width="20" height="20" alt="Aplicaciones web"><a href="index.html">APLICACIONES WEB</a></li>
+        <li><img src="images/icon-Marketing.svg" width="20" height="20" alt="Marketing Digital"><a href="index.html">MARKETING DIGITAL</a></li>
+        <li><img src="images/icon-Analisis-SEO.svg" width="20" height="20" alt="Analisis SEO"><a href="index.html">ANALISIS SEO</a></li>
+        <li><img src="images/icon-Marca.svg" width="20" height="20" alt="Creacion de Marcas"><a href="index.html">CREACIONES DE MARCAS</a></li>
+      </ul>
+      <!-- <img src="images/desarrollador web.webp" alt="desarrollador web apdesarrolloweb.com"/> -->
+      <div class="navbar-logo-social">
+        <ul class="d-flex">
+          <li class="m-lr-10"><a href="https://api.whatsapp.com/send?phone=56935871463"><svg alt="logotipo Whatsapp" class="hover-icon" width="27" height="27" version="1.1" viewBox="0 0 31.75 31.75" xmlns="http://www.w3.org/2000/svg">
+            <path d="m20.369 17.455q0.36226 0 2.0297 0.93382 1.6673 0.86198 1.8122 1.0775 0.07237 0.07172 0.07237 0.28726 0 0.64652-0.36226 1.5803-0.36226 0.79015-1.4498 1.3648-1.0873 0.50281-2.1022 0.50281-1.0873 0-3.9869-1.2212-2.0296-1.0057-3.4794-2.4423-1.4498-1.4366-3.0445-3.8071-1.5223-2.155-1.5223-3.9508v-0.21554q0.14514-1.8677 1.5223-3.2325 0.5074-0.43101 1.0873-0.43101h0.36226q0.21751 0.07172 0.43495 0.07172 0.43491 0 0.5074 0.14383 0.14514 0.07172 0.36266 0.50281 0 0.14383 0.21751 0.79015 0.28988 0.57468 0.43491 1.0775 0.50744 1.293 0.50744 1.5085 0 0.43101-0.65238 1.1493-0.72491 0.71831-0.72491 1.0057 0 0.14383 0.07238 0.28726 0.79736 1.6521 2.1022 2.8015 1.3048 1.2211 3.117 2.0831 0.43495 0.14383 0.50744 0.14383 0.28989 0 1.0873-1.0057 0.86986-1.0057 1.0873-1.0057zm-4.2044 10.919q2.6096 0 5.0742-1.0775 2.3196-0.93382 4.1318-2.7297 1.8122-1.7958 2.7546-4.0945 1.0148-2.2268 1.0148-5.0283 0-2.7296-1.0148-4.9564-1.0149-2.4423-2.7546-4.1663-1.5947-1.5803-4.1318-2.7297-2.6096-1.0057-5.0742-1.0057-2.4646 0-5.0742 1.0057-2.5371 1.1493-4.1318 2.7297-1.7397 1.724-2.7546 4.1663-1.0148 2.2268-1.0148 4.9564 0 4.2381 2.4646 7.5424l-1.6673 4.8128 5.0017-1.5803q3.407 2.155 7.1764 2.155zm-6.089-27.153q3.0446-1.2212 6.089-1.2212 3.0446 0 6.0891 1.2212 2.7546 1.1493 4.9293 3.3043 2.1022 2.0113 3.3345 4.9565 1.2323 2.6578 1.2323 5.9621 0 3.3043-1.2323 6.0339-1.2323 2.8733-3.3345 4.9565-1.9572 1.9395-4.9293 3.3043-3.0445 1.2212-6.0891 1.2212-4.0593 0-7.5388-1.9395l-8.6261 2.7297 2.7546-8.3326q-2.1747-3.5198-2.1747-7.9734 0-3.3043 1.2323-5.9621 1.2323-2.9451 3.3345-4.9565 2.1747-2.155 4.9292-3.3043z" fill="#fff" stroke-width=".49481"/>
+           </svg></a></li>
+          <li class="m-lr-10">
+            <a href="tel:56935871463">
+              <svg class="hover-icon" width="27" height="27" version="1.1" viewBox="0 0 5.1889 5.1891" xmlns="http://www.w3.org/2000/svg">
+                <path d="m0.68336 0s1.415 0.733 1.4214 1.4022c2e-3 0.2894-0.60302 0.6183-0.60302 0.6183-0.0376 0.061-0.49071 0.3029 0.43072 1.2716 0.44932 0.4723 0.96342 0.7222 1.3094 0.3658 0 0 0.30202-0.5431 0.55995-0.54 0.65379 0.01 1.387 1.4022 1.387 1.4022l-0.55135 0.5399c-0.16121 0.1292-0.35006 0.1559-0.55996 0.1045-0.68935-0.263-3.2959-0.6273-4.0662-4.1717-5e-3 -0.1404-0.0589-0.2663 0.12062-0.4616z" fill="#ababab"/>
+               </svg>
+            </a>
+          </li>
+          <li class="m-lr-10">
+            <a href="https://www.facebook.com/apdesarrolloweb2022">
+              <svg class="hover-icon" alt ="logotipo Facebook" width="27" height="27" version="1.1" viewBox="0 0 31.749 31.75" xmlns="http://www.w3.org/2000/svg">
+                <path d="m25.806 4.4e-5q2.4645 0 4.2043 1.7397 1.7396 1.7397 1.7396 4.2043v19.862q0 2.4646-1.7396 4.2043-1.7398 1.7397-4.2043 1.7397h-3.9144v-12.323h4.1318l0.65246-4.7842h-4.7842v-3.0445q0-1.0873 0.50744-1.7397 0.57973-0.57991 1.8847-0.57991h2.537v-4.3493q-1.7396-0.14502-3.6968-0.14502-2.827 0-4.4943 1.6672-1.6671 1.6672-1.6671 4.6393v3.5519h-4.1319v4.7842h4.1319v12.323h-11.018q-2.4646 0-4.2043-1.7397-1.7398-1.7397-1.7398-4.2043v-19.862q0-2.4646 1.7398-4.2043 1.7397-1.7397 4.2043-1.7397z" fill="#fff" stroke-width=".49706"/>
+              </svg>
+            </a>
+          </li>
+          <li class="m-lr-10">
+            <a href="https://www.instagram.com/apdesarrolloweb">
+              <svg class="hover-icon" alt ="logotipo Instagram" width="27" height="27" version="1.1" viewBox="0 0 31.75 31.75" xmlns="http://www.w3.org/2000/svg">
+                <path d="m28.198 26.821v-13.41h-2.827q0.43491 1.3048 0.43491 2.7546 0 2.6096-1.3047 4.7842-1.4498 2.2471-3.6245 3.4795-2.2471 1.3048-5.0016 1.3048-4.0594 0-6.9589-2.8271t-2.8995-6.7414q0-1.4498 0.43491-2.7546h-2.9721v13.41q0 0.57991 0.36226 0.94234 0.5074 0.36246 0.94231 0.36246h22.109q0.43491 0 0.94235-0.36246 0.36226-0.36242 0.36226-0.94234zm-5.8714-11.018q0-2.6096-1.8848-4.3493-1.8847-1.8122-4.5667-1.8122-2.6821 0-4.4943 1.8122-1.8847 1.7397-1.8847 4.3493 0 2.5371 1.8847 4.4218 1.9572 1.8122 4.4943 1.8122 2.5372 0 4.5667-1.8122 1.8848-1.8847 1.8848-4.4218zm5.8714-7.4663v-3.407q0-0.57991-0.43491-1.0148-0.43491-0.43493-1.0148-0.43493h-3.6243q-0.57993 0-1.0148 0.43493-0.36226 0.36242-0.36226 1.0148v3.407q0 0.6524 0.36226 1.0148 0.43491 0.43493 1.0148 0.43493h3.6243q0.57993 0 1.0148-0.43493 0.43491-0.43493 0.43491-1.0148zm3.552-4.2768v23.631q0 1.7397-1.1597 2.8995-1.1599 1.1598-2.8995 1.1598h-23.631q-1.7398 0-2.8995-1.1598-1.1599-1.1598-1.1599-2.8995v-23.631q0-1.7397 1.1599-2.8996 1.1597-1.1598 2.8995-1.1598h23.631q1.7397 0 2.8995 1.1598 1.1597 1.1598 1.1597 2.8996z" fill="#fff" stroke-width=".49706"/>
+              </svg>
+           </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id="layer-navbar"></div>  <!-- capa negra que cubre fondo -->
+    <main role="main">
+      <section class="main-section">
+        <div class="main-section-content-img">
+          <picture>
+              <source media="(max-width: 490px)" srcset="images/imagen-principal-480.webp 490w" sizes="100vw">
+              <img src="images/imagen-principal.webp" alt="imagen apdesarrolloweb.com"/>
+          </picture>
+        </div>
 
-
-
-    [![Build project and run Lighthouse CI](https://github.com/antopfs/lighthouse/actions/workflows/lighthouse-ci.yaml/badge.svg?branch=main)](https://github.com/antopfs/lighthouse/actions/workflows/lighthouse-ci.yaml)
-    
-</body>
+          <div class ="main-section-content-title" id="content-title-main">
+          <h1 class="main-section-title">
+            PÁGINAS WEB Y MARKETING DIGITAL
+          </h1>
+          <div>
+            <form action="contacto.html">
+              <button class="button-custom button-main hover-button">
+                Más información
+              </button>
+            </form>
+          </div>
+        </div>
+      </section> 
+     <section class="services bg-light" >
+        <h2 class="title-seccion m-b-50 services-title text-center">Servicios</h2>
+          <div class="services-content">
+            <article class="services-item">
+          <img src="images/icon-Paginas-web.svg" width="55.938" height="55.938" alt="icono de páginas web">
+          <h3>Páginas Web</h3>
+          <p class="text-center">Diseños orientado a emprendedores o a empresas que necesitan tener visualización en Internet, para mostrar sus servicios, tienda, productos, lanzamientos e información de contactos y mucho más.</p>
+            </article>
+            <article class="services-item">
+          <img src="images/icon-Tiendas-online.svg" width="54.131" height="54.007" alt="icono de tiendas online">
+          <h3>Tiendas Online</h3>
+          <p class="text-center">Creamos tu Tienda Online y en poco tiempo puedes vender en línea, promocionar tus productos, recibir pagos, llevar inventario de productos, registro de clientes, catalogos de productos  y mucho más.</p>
+            </article>
+            <article class="services-item">
+          <img src="images/icon-Aplicaciones-web.svg" width="52.913" height="52.913" alt="icono de aplicaciones web">
+          <h3>Aplicaciones Web</h3>
+          <p class="text-center">Páginas con funcionalidades personalizadas, conexiones con servidores, bases de datos, API,   con diferentes servicios para  brindar soluciones que se adapten a su negocio.</p>
+            </article>
+            <article class="services-item">
+          <img src="images/icon-Marketing.svg" width="47.919" height="52.913" alt="icono de marketing digital">
+          <h3>Marketing Digital</h3>
+          <p class="text-center">Adquiere visibilidad ante los clientes cuando busquen negocios como el tuyo mediante la Búsqueda de Google, Facebook e Instagram. mediante campañas publicitarias.</p>
+            </article>
+            <article class="services-item">
+          <img src="images/icon-Analisis-SEO.svg" width="92.107" height="49.134" alt="icono de análisis SEO">
+          <h3>Análisis SEO</h3>
+          <p class="text-center">Revisión de parámetros de tus páginas web para mejorar el posicionamiento, velocidad, accesibilidad,  para brindar experiencia sólida a sus  usuarios.</p>
+            </article>
+            <article class="services-item">
+          <img src="images/icon-Marca.svg" width="35.276" height="52.913" alt="icono de creacion de marcas">
+          <h3>Creación de Marcas</h3>
+          <p class="text-center">Creamos tu marca con las tendencias actuales par tu negocio,pensando en tu público objetivo.</p>
+            </article>
+          </div>
+      </section>
+       <section class="tecnology  bg-dark" >
+        <ul class="tecnology-content">
+          <li><img src="images/icon-HTML.svg" alt="icono de HTML" width="87.327" height="99.274"></li>
+          <li><img src="images/icon-CSS.svg" alt="icono de CSS" width="76.581" height="87.081"></li>
+          <li><img src="images/icon-JS.svg" alt="icono de JS"width="77.164" height="88.074"></li>
+          <li><img src="images/icon-Sass.svg" alt="icono de Sass" width="85.63" height="62.719"></li>
+          <li><img src="images/icon-HTML.svg" alt="icono de HTML" width="87.327" height="99.274"></li>
+          <li><img src="images/icon-CSS.svg" alt="icono de CSS" width="76.581" height="87.081"></li>
+          <li><img src="images/icon-JS.svg" alt="icono de JS"width="77.164" height="88.074"></li>
+          <li><img src="images/icon-Sass.svg" alt="icono de Sass" width="85.63" height="62.719"></li>
+        </ul>
+      </section>
+      <section class = "call-action p-60">
+        <p>Desarrollo de páginas y aplicaciones web, tiendas online, marketing digital, hacemos su presupuesto sin compromisos, cotice con nosotros nos ajustamos a sus necesidades.</p>
+        <form action="contacto.html">
+          <button class="button-custom hover-button" type="submit">Contacto</button>
+        </form>
+      </section>
+      <section  id="how-do" class="how-do bg-dark">
+        <h2 class="title-seccion m-b-50 title-how text-center" style="color:#fff">¿Cómo Haremos tu Página?</h3>
+        <details class="option-drop" >
+          <summary class="sum-option-drop">Paso 1: Diseño</summary>
+          <h3>Elige el diseño de tu Pagina Web</h3>
+          <img src="images/web basica.webp" width=390 height=260 alt="diseño de pagina web apdesarrolloweb.com"/>
+          <p>Te ayudo a realizar el proyecto de tu Página Web o Tienda Online, logotipo, esquemas de colores, nombre de dominio y todo lo referente a la actualidad de la web, escogiendo el diseño perfecto que se adapte a tu tipo de negocio, nos adaptamos a tus exigencias y requerimentos específicos para lograr la mayor satisfacción posible.
+            Consulta!!!
+            Generamos el presupuesto detallado de tu solicitud sin costo alguno…</p>
+        </details>
+        <details class="option-drop">
+          <summary class="sum-option-drop">Paso 2: Desarrollo</summary>
+          <h3>Desarrollo de tu Página Web</h3>
+          <img src="images/desarrollador web.webp" width=390 height=260 alt="desarrollador web apdesarrolloweb.com"/>
+          <p>Una vez conocido el diseño de tu Página Web o Tienda Online se construye tu web con todo el contenido ya indicado, anexamos tus imágenes, tu logotipo e incluímos los textos personalizados.
+            También se puede usar la funcionalidad de administrador de los sitios web, WordPress y puedes administrar tu contenido de la forma desees con el plan Web Administrable.</p>
+        </details>
+        <details class="option-drop">
+          <summary class="sum-option-drop">Paso 3: Administración</summary>
+          <h3>Te enseño a administrar tu Página Web</h3>
+          <img src="images/web-administrable.webp" width=390 height=260 alt="web administrable apdesarrolloweb.com"/>
+          <p>Una vez publicada tu Página Web o Tienda Online, te enseño a administrarla, para que tú mismo puedas modificar y agregar contenido sin necesidad de ayuda técnica, y sin costo adicional, Te enseño a cambiar los colores, cargar tus imágenes personalizadas, agregar nuevas páginas, vincular tus redes sociales y mucho más…</p>
+        </details>
+        <details class="option-drop">
+          <summary class="sum-option-drop">Paso 4: Publicación</summary>
+          <h3>Publicación tu Página Web</h3>
+          <img src="images/publicacion de pagina web.webp" width=390 height=260 alt="publicacion de pagina web apdesarrolloweb.com"/>
+          <p>Lista tu Página Web o Tienda Online te presentamos variedad de módulos útiles para poder generar contenido, también podrás contar con planes de publicidad en redes sociales como Facebook Ads y Google Ads que te ayuden al crecimiento de tu negocio</p>
+        </details>
+      </section>
+      <section class="post">
+        <h2 class="post-title text-center title-seccion">Últimas Entradas</h2>
+        <div class="post-content-main">
+          <p class="post-text-main" >Accede a nuestro Blog para revisar articulos relacionados con tecnologias web</p>
+            <button class="button-custom hover-button">Ver Todo</button>
+        </div>
+        <div class="post-content" id="card-content-layer">
+          <div class="post-content-articles" >
+            <article class="post-cart">
+              <h3>LIGHTHOUSE</h3>
+              <a href="#">
+                <div  class="post-cart-text">
+                  <div class="post-cart-information">
+                    <p class="text-center">Auditorias de páginas Web con Lighthouse, para mejorar la calidad de las mismas.</p>
+                  </div>
+                  <img src="images/lighthouse-post.svg" width = 300 height = 360 alt="LIGHTHOUSE">
+                </div>
+            </a>
+            </article>
+            <article class="post-cart">
+              <h3>SEO</h3>
+              <a href="#">
+                <div  class="post-cart-text">
+                  <div class="post-cart-information">
+                    <p class="text-center">Auditorias SEO, posicionamiento en buscador Google</p>
+                  </div>
+                  <img src="images/seo-post.svg" width = 300 height = 360 alt="SEO">
+                </div>
+              </a>
+            </article>
+            <article class="post-cart">
+              <h3>GOOGLE ADS</h3>
+              <a href="#">
+                <div  class="post-cart-text">
+                  <div class="post-cart-information">
+                    <p class="text-center">Anuncios Publicitarios en la red de busqueda de Google Ads</p>
+                  </div>
+                  <img src="images/google-ads.webp" width = 300 height = 360 alt="Google ADS">
+                </div>
+              </a>
+            </article>
+            <article class="post-cart">
+              <h3>LIGHTHOUSE</h3>
+              <a href="#">
+                <div  class="post-cart-text">
+                  <div class="post-cart-information">
+                    <p class="text-center">Contenido</p>
+                  </div>
+                  <img src="images/lighthouse-post.svg" width = 300 height = 360 alt="">
+                </div>
+              </a>
+            </article>
+            <article class="post-cart">
+              <h3>LIGHTHOUSE</h3>
+              <a href="#">
+                <div  class="post-cart-text">
+                  <div class="post-cart-information">
+                    <p class="text-center">Contenido</p>
+                  </div>
+                  <img src="images/lighthouse-post.svg" width = 300 height = 360 alt="">
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+        <div class="content-nav-scroll-card content-hidden-responsive" id="post-content-nav-scroll">
+          <div class="nav-scroll-card active"></div>
+          <div class="nav-scroll-card"></div>
+          <div class="nav-scroll-card"></div>
+        </div>  
+      </section> 
+    </main> 
+    <footer class="section-footer bg-dark p-20">
+      <div class="item-footer text-center main-footer">
+        <img src="images/logo-foother.svg" alt="logotipo apdesarrolloweb" style="margin: auto;" width="193" height="64">
+        <p>Diseño de paginas y aplicaciones  web y todo lo necesario para vender, promocionar, dar a conocer tu marca o producto en linea.</p>
+        <ul class="d-flex">
+          <li class="m-lr-10">
+            <a href="https://www.facebook.com/apdesarrolloweb2022">
+              <svg role="img" title="icono-facebook" width="20" height="20" version="1.1" viewBox="0 0 31.749 31.75" xmlns="http://www.w3.org/2000/svg">
+                <path d="m25.806 4.4e-5q2.4645 0 4.2043 1.7397 1.7396 1.7397 1.7396 4.2043v19.862q0 2.4646-1.7396 4.2043-1.7398 1.7397-4.2043 1.7397h-3.9144v-12.323h4.1318l0.65246-4.7842h-4.7842v-3.0445q0-1.0873 0.50744-1.7397 0.57973-0.57991 1.8847-0.57991h2.537v-4.3493q-1.7396-0.14502-3.6968-0.14502-2.827 0-4.4943 1.6672-1.6671 1.6672-1.6671 4.6393v3.5519h-4.1319v4.7842h4.1319v12.323h-11.018q-2.4646 0-4.2043-1.7397-1.7398-1.7397-1.7398-4.2043v-19.862q0-2.4646 1.7398-4.2043 1.7397-1.7397 4.2043-1.7397z" fill="#f00" stroke-width=".49706"/>
+              </svg>
+            </a>
+          </li>
+          <li class="m-lr-10">
+            <a href="https://www.instagram.com/apdesarrolloweb/">
+              <svg role="img" title="icono-instagram" width="20" height="20" version="1.1" viewBox="0 0 31.75 31.75" xmlns="http://www.w3.org/2000/svg">
+                <path d="m28.198 26.821v-13.41h-2.827q0.43491 1.3048 0.43491 2.7546 0 2.6096-1.3047 4.7842-1.4498 2.2471-3.6245 3.4795-2.2471 1.3048-5.0016 1.3048-4.0594 0-6.9589-2.8271t-2.8995-6.7414q0-1.4498 0.43491-2.7546h-2.9721v13.41q0 0.57991 0.36226 0.94234 0.5074 0.36246 0.94231 0.36246h22.109q0.43491 0 0.94235-0.36246 0.36226-0.36242 0.36226-0.94234zm-5.8714-11.018q0-2.6096-1.8848-4.3493-1.8847-1.8122-4.5667-1.8122-2.6821 0-4.4943 1.8122-1.8847 1.7397-1.8847 4.3493 0 2.5371 1.8847 4.4218 1.9572 1.8122 4.4943 1.8122 2.5372 0 4.5667-1.8122 1.8848-1.8847 1.8848-4.4218zm5.8714-7.4663v-3.407q0-0.57991-0.43491-1.0148-0.43491-0.43493-1.0148-0.43493h-3.6243q-0.57993 0-1.0148 0.43493-0.36226 0.36242-0.36226 1.0148v3.407q0 0.6524 0.36226 1.0148 0.43491 0.43493 1.0148 0.43493h3.6243q0.57993 0 1.0148-0.43493 0.43491-0.43493 0.43491-1.0148zm3.552-4.2768v23.631q0 1.7397-1.1597 2.8995-1.1599 1.1598-2.8995 1.1598h-23.631q-1.7398 0-2.8995-1.1598-1.1599-1.1598-1.1599-2.8995v-23.631q0-1.7397 1.1599-2.8996 1.1597-1.1598 2.8995-1.1598h23.631q1.7397 0 2.8995 1.1598 1.1597 1.1598 1.1597 2.8996z" fill="#f00" stroke-width=".49706"/>
+               </svg>
+            </a>
+          </li>
+          <li class="m-lr-10">
+            <a href="https://api.whatsapp.com/send?phone=56935871463">
+              <svg role="img" title="icono-whatsapp" width="20" height="20" version="1.1" viewBox="0 0 31.75 31.75" xmlns="http://www.w3.org/2000/svg">
+                <path d="m20.369 17.455q0.36226 0 2.0297 0.93382 1.6673 0.86198 1.8122 1.0775 0.07237 0.07172 0.07237 0.28726 0 0.64652-0.36226 1.5803-0.36226 0.79015-1.4498 1.3648-1.0873 0.50281-2.1022 0.50281-1.0873 0-3.9869-1.2212-2.0296-1.0057-3.4794-2.4423-1.4498-1.4366-3.0445-3.8071-1.5223-2.155-1.5223-3.9508v-0.21554q0.14514-1.8677 1.5223-3.2325 0.5074-0.43101 1.0873-0.43101h0.36226q0.21751 0.07172 0.43495 0.07172 0.43491 0 0.5074 0.14383 0.14514 0.07172 0.36266 0.50281 0 0.14383 0.21751 0.79015 0.28988 0.57468 0.43491 1.0775 0.50744 1.293 0.50744 1.5085 0 0.43101-0.65238 1.1493-0.72491 0.71831-0.72491 1.0057 0 0.14383 0.07238 0.28726 0.79736 1.6521 2.1022 2.8015 1.3048 1.2211 3.117 2.0831 0.43495 0.14383 0.50744 0.14383 0.28989 0 1.0873-1.0057 0.86986-1.0057 1.0873-1.0057zm-4.2044 10.919q2.6096 0 5.0742-1.0775 2.3196-0.93382 4.1318-2.7297 1.8122-1.7958 2.7546-4.0945 1.0148-2.2268 1.0148-5.0283 0-2.7296-1.0148-4.9564-1.0149-2.4423-2.7546-4.1663-1.5947-1.5803-4.1318-2.7297-2.6096-1.0057-5.0742-1.0057-2.4646 0-5.0742 1.0057-2.5371 1.1493-4.1318 2.7297-1.7397 1.724-2.7546 4.1663-1.0148 2.2268-1.0148 4.9564 0 4.2381 2.4646 7.5424l-1.6673 4.8128 5.0017-1.5803q3.407 2.155 7.1764 2.155zm-6.089-27.153q3.0446-1.2212 6.089-1.2212 3.0446 0 6.0891 1.2212 2.7546 1.1493 4.9293 3.3043 2.1022 2.0113 3.3345 4.9565 1.2323 2.6578 1.2323 5.9621 0 3.3043-1.2323 6.0339-1.2323 2.8733-3.3345 4.9565-1.9572 1.9395-4.9293 3.3043-3.0445 1.2212-6.0891 1.2212-4.0593 0-7.5388-1.9395l-8.6261 2.7297 2.7546-8.3326q-2.1747-3.5198-2.1747-7.9734 0-3.3043 1.2323-5.9621 1.2323-2.9451 3.3345-4.9565 2.1747-2.155 4.9292-3.3043z" fill="#f00" stroke-width=".49481"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="item-footer contact-footer">
+        <h3 >Contactanos</h3>
+        <ul>
+          <li>
+            <a href="#">
+              <img src="images/icon-llamada.svg" width="19.612" height="19.612" alt="Icono de llamada">
+              <spam>9 3587 14 63</spam>
+            </a>
+          </li>
+          <li>
+            <a href="https://api.whatsapp.com/send?phone=56935871463">
+              <img src="images/icon-whatsapp-min.svg" width="19" height="19.001" alt="Icono de Whatapp">
+              <spam>9 3587 14 63</spam>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:info@apdesarrolloweb.com?Subject=Correo%20desde%20Apdesarrolloweb.com">
+              <img src="images/icon-Mail-min.svg" height="19" width="24.19903" alt="Icono de correo">
+              <spam>info@apdesarrolloweb.com</spam>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/icon-address-min.svg" width="12.667" height="18.999" alt="Icono de direcciòn" >
+              <spam>Santiago de Chile</spam>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="item-footer services-footer">
+        <h3>Servicios</h3>
+        <ul>
+          <li><a href="#">Páginas Web</a></li>
+          <li><a href="#">Aplicaciobes Web</a></li>
+          <li><a href="#">Tiendas Online</a></li>
+          <li><a href="#">Análisis SEO</a></li>
+          <li><a href="#">Marketing Digital</a></li>
+          <li><a href="#">Creación de Marcas</a></li>
+        </ul>
+      </div>
+      <div class="item-footer post-footer">
+        <h3>Últimas Entradas</h3>
+        <ul>
+          <li><a href="#">Lighthuse</a></li>
+          <li><a href="#">SEO</a></li>
+          <li><a href="#">Google Ads</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="scripts/hammer.min.js"></script>
+    <!-- <script src="scripts/minidaemon.js"></script> -->
+    <script src="scripts/main.js"></script>
+  </body>
 </html>
