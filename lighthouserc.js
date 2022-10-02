@@ -11,7 +11,7 @@ module.exports = {
         assertions: {
           'categories:performance': ['warn', {minScore: 1}],
           'categories:accessibility': ['error', {minScore: 1}],
-          'categories:SEO': ['error', {minScore: 1}]
+          'categories:seo': ['error', {minScore: 1}]
         }
       },
     },
